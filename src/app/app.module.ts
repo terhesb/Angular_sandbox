@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorService } from './author.service';
 import { StarComponent } from './star/star.component';
+import { TitlecaseComponent } from './titlecase/titlecase.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		AuthorsComponent,
-		StarComponent
+		StarComponent,
+		TitlecaseComponent
 	],
 	imports: [
 		BrowserModule,

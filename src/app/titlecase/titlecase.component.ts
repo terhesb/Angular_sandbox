@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 	templateUrl: './titlecase.component.html',
 	styleUrls: ['./titlecase.component.css']
 })
-export class TitlecaseComponent{
+export class TitlecaseComponent {
 
 	correctedTitle: string;
 
@@ -16,11 +16,11 @@ export class TitlecaseComponent{
 	print(title: string) {
 		let words = title.split(" ");
 
-		for(let i = 0; i < words.length; i++) {
+		for (let i = 0; i < words.length; i++) {
 			let word = words[i];
 			word = word.toLowerCase();
-			if(this.preposition.includes(word)) {
-				if( i === 0) {
+			if (this.preposition.includes(word)) {
+				if (i === 0) {
 					word = this.firstCharUpperCase(word);
 				}
 			} else {
@@ -31,7 +31,7 @@ export class TitlecaseComponent{
 		this.correctedTitle = words.join(" ");
 	}
 
-	firstCharUpperCase(word: string):string{
+	firstCharUpperCase(word: string): string {
 		return word.charAt(0).toUpperCase() + word.substring(1);
 	}
 

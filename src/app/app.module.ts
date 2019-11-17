@@ -7,13 +7,15 @@ import { AuthorsComponent } from './authors/authors.component';
 import { AuthorService } from './author.service';
 import { StarComponent } from './star/star.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		AuthorsComponent,
 		StarComponent,
-		TitlecaseComponent
+		TitlecaseComponent,
+		LikeComponent
 	],
 	imports: [
 		BrowserModule,

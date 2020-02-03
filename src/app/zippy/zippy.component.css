@@ -1,0 +1,20 @@
+.zippy-component{
+	padding: 5px;
+}
+
+.zipp{
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.heading{
+	cursor: pointer;
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+}
+
+.expanded{
+	background-color: lightgray;
+}

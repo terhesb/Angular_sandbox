@@ -8,6 +8,7 @@ import { AuthorService } from './author.service';
 import { StarComponent } from './star/star.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { LikeComponent } from './like/like.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
 	declarations: [
@@ -15,7 +16,8 @@ import { LikeComponent } from './like/like.component';
 		AuthorsComponent,
 		StarComponent,
 		TitlecaseComponent,
-		LikeComponent
+		LikeComponent,
+		ZippyComponent
 	],
 	imports: [
 		BrowserModule,

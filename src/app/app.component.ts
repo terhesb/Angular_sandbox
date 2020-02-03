@@ -11,4 +11,8 @@ export class AppComponent {
 		isLiked: true,
 		likesCount: 5
 	}
+	zippies = [
+		{heading: "FirstHead", body: ["FirstBody", "FirstBody", "FirstBody"]},
+		{heading: "SecondHead", body: ["SecondBody", "Balazs", "Proba", "..."]},
+	]
 }

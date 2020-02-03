@@ -1,4 +1,10 @@
-<h1>{{ title }}</h1>
-<app-authors></app-authors>
-<app-titlecase></app-titlecase>
-<app-like [active]="tweet.isLiked" [likesCount]="tweet.likesCount"></app-like>
+<div class="app-default">
+	<h1>{{ title }}</h1>
+	<app-authors></app-authors>
+	<app-titlecase></app-titlecase>
+	<app-like [active]="tweet.isLiked" [likesCount]="tweet.likesCount"></app-like>
+	<app-zippy *ngFor="let zipp of zippies">
+		<div class="heading">{{zipp.heading}}</div>
+		<div class="body" *ngFor="let b of zipp.body">{{b}}</div>
+	</app-zippy>
+</div>

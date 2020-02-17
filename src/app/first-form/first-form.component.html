@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+	<div class="form-group">
+		<label for="courseName">{{cousrseName}}</label>
+		<input required [minlength]="mlength" 
+			ngModel name="courseName" id="courseName" #course="ngModel"
+			type="text" class="form-control"
+			[class.error]="course.touched && !course.valid && !focusedCourse"
+			(focus)="this.focusedCourse = true;"
+			(blur)="this.focusedCourse = false;">
+		<div class="alert alert-danger" *ngIf="course.touched && !course.valid && !focusedCourse">
+			<div *ngIf="course.errors.required">{{cousrseName}} is required!</div>
+			<div *ngIf="course.errors.minlength">{{cousrseName}} should be at least {{mlength}} characters!</div>
+		</div>
+		<label for="category">{{categoryName}}</label>
+		<select required #bla
+			ngModel name="category" id="category" #category="ngModel"
+			class="form-control" [class.error]="category.touched && !category.valid && !focusedCategory"
+			(focus)="this.focusedCategory = true;"
+			(blur)="this.focusedCategory = false;">
+			<option value=""></option>
+			<option *ngFor="let cate of categories" [value]="cate.id">{{cate.name}}</option>
+		</select>
+		<div class="alert alert-danger" *ngIf="category.touched && !category.valid && !focusedCategory">
+			<div *ngIf="category.errors.required">{{categoryName}} is required!</div>
+		</div>
+		<label><input ngModel name="moneyBack" type="checkbox" value="true"> 30-day money back guarantee</label>
+	</div>
+	<p>{{f.value | json}}</p>
+	<button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</form>

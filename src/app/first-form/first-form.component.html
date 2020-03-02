@@ -4,23 +4,23 @@
 		<input required [minlength]="mlength" 
 			ngModel name="courseName" id="courseName" #course="ngModel"
 			type="text" class="form-control"
-			[class.error]="course.touched && !course.valid && !focusedCourse"
-			(focus)="this.focusedCourse = true;"
-			(blur)="this.focusedCourse = false;">
-		<div class="alert alert-danger" *ngIf="course.touched && !course.valid && !focusedCourse">
+			[class.error]="course.touched && !course.valid && !isFocused(course)"
+			(focus)="focused(course)"
+			(blur)="focused()">
+		<div class="alert alert-danger" *ngIf="course.touched && !course.valid && !isFocused(course)">
 			<div *ngIf="course.errors.required">{{cousrseName}} is required!</div>
 			<div *ngIf="course.errors.minlength">{{cousrseName}} should be at least {{mlength}} characters!</div>
 		</div>
 		<label for="category">{{categoryName}}</label>
-		<select required #bla
+		<select required
 			ngModel name="category" id="category" #category="ngModel"
-			class="form-control" [class.error]="category.touched && !category.valid && !focusedCategory"
-			(focus)="this.focusedCategory = true;"
-			(blur)="this.focusedCategory = false;">
+			class="form-control" [class.error]="category.touched && !category.valid && !isFocused(category)"
+			(focus)="focused(category)"
+			(blur)="focused()">
 			<option value=""></option>
 			<option *ngFor="let cate of categories" [value]="cate.id">{{cate.name}}</option>
 		</select>
-		<div class="alert alert-danger" *ngIf="category.touched && !category.valid && !focusedCategory">
+		<div class="alert alert-danger" *ngIf="category.touched && !category.valid && !isFocused(category)">
 			<div *ngIf="category.errors.required">{{categoryName}} is required!</div>
 		</div>
 		<label><input ngModel name="moneyBack" type="checkbox" value="true"> 30-day money back guarantee</label>

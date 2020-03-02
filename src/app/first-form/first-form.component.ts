@@ -9,8 +9,7 @@ import { NgModel, NgForm } from '@angular/forms';
 export class FirstFormComponent {
 
 	mlength: number = 3;
-	focusedCourse: boolean = false;
-	focusedCategory: boolean = false;
+	focusedElement: NgModel;
 	cousrseName: string = "Course name"
 	categoryName: string = "Category";
 
@@ -22,6 +21,14 @@ export class FirstFormComponent {
 
 	submit(f: NgForm): void {
 		console.log(f.value);
+	}
+
+	focused(d: NgModel):void {
+		this.focusedElement = d;
+	}
+
+	isFocused(focus: NgModel):boolean {
+		return focus === this.focusedElement;
 	}
 
 }

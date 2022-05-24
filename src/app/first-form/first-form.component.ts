@@ -23,7 +23,7 @@ export class FirstFormComponent {
 		console.log(f.value);
 	}
 
-	focused(d: NgModel):void {
+	focused(d?: NgModel):void {
 		this.focusedElement = d;
 	}
 

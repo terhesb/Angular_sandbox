@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class StarComponent {
 
-	private star: boolean;
+	star: boolean;
 
 	constructor() {
 		this.star = false;

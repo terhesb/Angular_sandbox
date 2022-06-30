@@ -11,6 +11,7 @@ import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { LikeComponent } from './like/like.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { FirstFormComponent } from './first-form/first-form.component';
+import { FirstCharactersPipe } from './titlecase/firstCharacters.pipe';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,8 @@ import { FirstFormComponent } from './first-form/first-form.component';
 		TitlecaseComponent,
 		LikeComponent,
 		ZippyComponent,
-		FirstFormComponent
+		FirstFormComponent,
+		FirstCharactersPipe
 	],
 	imports: [
 		BrowserModule,

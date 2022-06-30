@@ -1,2 +1,11 @@
-<input #title (keyup)="print(title.value)" />
-<p>{{ correctedTitle }}</p>
+<table>
+    <tr>
+		<td>The text</td>
+		<td><input #title (keyup)="print(title.value)" /></td>
+	</tr>
+	<tr>
+		<td>No. of character you want: </td>
+		<td><input [(ngModel)]="numberOfChars" /></td>
+	</tr>
+</table>
+<p>{{ correctedTitle | firstCharacters:numberOfChars }}</p>
